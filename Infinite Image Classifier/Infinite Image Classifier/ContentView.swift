@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import Firebase
 
 struct ContentView: View{
     let data = (1...1000).map { "Item \($0)" }
@@ -27,6 +28,7 @@ struct ContentView: View{
                     })
                 }
                 Spacer()
+                BottomTrainingActionBar()
             }
             
             .navigationBarTitle("Image Classifier").padding(.top)
@@ -52,14 +54,14 @@ struct Card: View{
             Image(systemName: icon)
                 .resizable()
                 .frame(width: 82, height: 68, alignment: .center)
-                .foregroundColor(Color(hex: "3A506B"))
+                .foregroundColor(.accentColor)
                 .padding()
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 20)
                                 .foregroundColor(Color(hex:"F0F5F5"))).shadow(color: Color(hex: "F2F2F2"), radius: 2, x: 1, y: 1).padding(.horizontal)
             
             Text(text)
-                .foregroundColor(Color(hex:"3A506B")).frame(maxWidth: 170).multilineTextAlignment(.center).font(.custom("Montserrat-Bold", size: 20))
+                .foregroundColor(.accentColor).frame(maxWidth: 170).multilineTextAlignment(.center).font(.custom("Montserrat-Bold", size: 20))
         }
     }
 }
@@ -90,3 +92,59 @@ extension Color {
     }
 }
 
+struct TrainingModelDoc: Hashable, Identifiable{
+    var id = UUID()
+    var docID: String
+    var modelName: String
+}
+struct BottomTrainingActionBar:View{
+    @State var showSheet: TrainingModelDoc? = nil
+    @State var docsInTraining:[TrainingModelDoc] = []
+    var body: some View{
+            VStack{
+            if self.docsInTraining.count > 0{
+                VStack{
+                    Divider()
+                    Menu(content: {
+                        ForEach(self.docsInTraining, id:\.self){doc in
+                            Button(doc.modelName,action:{ self.showSheet = doc})
+                        }
+                    }, label: {
+                        Text("View Current ML Model In Training")
+                            .font(.custom("OpenSans-SemiBold", size: 14))
+                            .foregroundColor(.accentColor).padding()
+                    })
+                    
+                }
+            }
+        }
+        .onAppear{
+            Firestore.firestore().collection("TrainingModels").whereField("user", isEqualTo: "infiniteImageClassifierWildCard").getDocuments(completion: {docs, error in
+                if let docs = docs{
+                    self.docsInTraining.removeAll()
+                    for doc in docs.documents{
+                        self.docsInTraining.append(TrainingModelDoc(docID: doc.documentID, modelName: doc.data()["name"] as? String ?? "untitled"))
+                    }
+                }
+            })
+        }
+        .sheet(item: self.$showSheet, content: {doc in
+            NavigationView{
+                TrainingObserveView(trainingDocID: doc.docID)
+            }
+        })
+        .onReceive(NotificationCenter.default.publisher(for: .dismissTrainObserveSheet)) {_ in
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.showSheet = nil
+            }
+        }
+        
+    }
+}
+extension Notification.Name {
+    
+    static var dismissTrainObserveSheet: Notification.Name {
+        return Notification.Name("dismissTrainObserveSheet")
+    }
+}

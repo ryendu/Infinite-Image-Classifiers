@@ -726,6 +726,7 @@ struct AfterTrainingView: View {
                                 Firestore.firestore().collection("TrainingModels").document(self.trainingDocID).delete()
                             
                     }
+                    NotificationCenter.default.post(name: .dismissTrainObserveSheet, object: nil)
                 }))
             }
         }

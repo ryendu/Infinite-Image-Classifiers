@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2E85BA25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */; };
+		8C2E85BB25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C3CD00525BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */; };
 		8C3CD00725BBAFA7005B6CCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00625BBAFA7005B6CCE /* ContentView.swift */; };
 		8C3CD00925BBAFA8005B6CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD00825BBAFA8005B6CCE /* Assets.xcassets */; };
@@ -28,11 +30,26 @@
 		8C3CD06725BBB95B005B6CCE /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3CD06625BBB95B005B6CCE /* URLImage */; };
 		8C3CD06B25BBB9B0005B6CCE /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3CD06A25BBB9B0005B6CCE /* SwiftUIX */; };
 		8C3CD0A225BBBE29005B6CCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD0A125BBBE29005B6CCE /* GoogleService-Info.plist */; };
-		9D6176483CACECDCCF0E3BF3 /* Pods_Infinite_Image_Classifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C3832C3792DA426A4F4BC8 /* Pods_Infinite_Image_Classifier.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C2E85BC25BC74AC0093086A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C2E85BB25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B7CC93F53C0C1E63684675D /* Pods-Infinite Image Classifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infinite Image Classifier.release.xcconfig"; path = "Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier.release.xcconfig"; sourceTree = "<group>"; };
+		8C2E85B525BC748E0093086A /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3CD00125BBAFA7005B6CCE /* Infinite Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infinite Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infinite_Image_ClassifierApp.swift; sourceTree = "<group>"; };
 		8C3CD00625BBAFA7005B6CCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,9 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2E85BA25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Frameworks */,
 				8C3CD06B25BBB9B0005B6CCE /* SwiftUIX in Frameworks */,
 				8C3CD06725BBB95B005B6CCE /* URLImage in Frameworks */,
-				9D6176483CACECDCCF0E3BF3 /* Pods_Infinite_Image_Classifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,8 @@
 		1C7A08884432A3ED78E9D8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */,
+				8C2E85B525BC748E0093086A /* Pods_Infinite_Image_Classifier.framework */,
 				B4C3832C3792DA426A4F4BC8 /* Pods_Infinite_Image_Classifier.framework */,
 			);
 			name = Frameworks;
@@ -162,6 +181,7 @@
 				8C3CCFFE25BBAFA7005B6CCE /* Frameworks */,
 				8C3CCFFF25BBAFA7005B6CCE /* Resources */,
 				A6EF055F7CBBD995AB20CB79 /* [CP] Embed Pods Frameworks */,
+				8C2E85BC25BC74AC0093086A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
