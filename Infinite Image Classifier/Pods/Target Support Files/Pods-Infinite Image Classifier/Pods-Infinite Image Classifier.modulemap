@@ -1,0 +1,6 @@
+framework module Pods_Infinite_Image_Classifier {
+  umbrella header "Pods-Infinite Image Classifier-umbrella.h"
+
+  export *
+  module * { export * }
+}
