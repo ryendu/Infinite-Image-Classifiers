@@ -1,0 +1,6 @@
+framework module Tatsi {
+  umbrella header "Tatsi-umbrella.h"
+
+  export *
+  module * { export * }
+}

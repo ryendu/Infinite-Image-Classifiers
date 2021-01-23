@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C2E85BA25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */; };
+		8C2E85BB25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C3CD00525BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */; };
+		8C3CD00725BBAFA7005B6CCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00625BBAFA7005B6CCE /* ContentView.swift */; };
+		8C3CD00925BBAFA8005B6CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD00825BBAFA8005B6CCE /* Assets.xcassets */; };
+		8C3CD00C25BBAFA9005B6CCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD00B25BBAFA9005B6CCE /* Preview Assets.xcassets */; };
+		8C3CD00E25BBAFA9005B6CCE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00D25BBAFA9005B6CCE /* Persistence.swift */; };
+		8C3CD01125BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00F25BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodeld */; };
+		8C3CD01A25BBAFEC005B6CCE /* supportingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD01925BBAFEC005B6CCE /* supportingFunctions.swift */; };
+		8C3CD01D25BBB0BA005B6CCE /* MakeImageClassifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD01C25BBB0BA005B6CCE /* MakeImageClassifierView.swift */; };
+		8C3CD02D25BBB333005B6CCE /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02325BBB333005B6CCE /* OpenSans-SemiBold.ttf */; };
+		8C3CD02E25BBB333005B6CCE /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02425BBB333005B6CCE /* Montserrat-Medium.ttf */; };
+		8C3CD02F25BBB333005B6CCE /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02525BBB333005B6CCE /* SF-Pro-Display-Bold.otf */; };
+		8C3CD03025BBB333005B6CCE /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02625BBB333005B6CCE /* Montserrat-Light.ttf */; };
+		8C3CD03125BBB333005B6CCE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02725BBB333005B6CCE /* OpenSans-Light.ttf */; };
+		8C3CD03225BBB333005B6CCE /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02825BBB333005B6CCE /* Montserrat-Bold.ttf */; };
+		8C3CD03325BBB333005B6CCE /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02925BBB333005B6CCE /* Montserrat-SemiBold.ttf */; };
+		8C3CD03425BBB333005B6CCE /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02A25BBB333005B6CCE /* OpenSans-Bold.ttf */; };
+		8C3CD03525BBB333005B6CCE /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02B25BBB333005B6CCE /* Montserrat-Regular.ttf */; };
+		8C3CD03625BBB333005B6CCE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD02C25BBB333005B6CCE /* OpenSans-Regular.ttf */; };
+		8C3CD06725BBB95B005B6CCE /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3CD06625BBB95B005B6CCE /* URLImage */; };
+		8C3CD06B25BBB9B0005B6CCE /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3CD06A25BBB9B0005B6CCE /* SwiftUIX */; };
+		8C3CD0A225BBBE29005B6CCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD0A125BBBE29005B6CCE /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C2E85BC25BC74AC0093086A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C2E85BB25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B7CC93F53C0C1E63684675D /* Pods-Infinite Image Classifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infinite Image Classifier.release.xcconfig"; path = "Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier.release.xcconfig"; sourceTree = "<group>"; };
+		8C2E85B525BC748E0093086A /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3CD00125BBAFA7005B6CCE /* Infinite Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infinite Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infinite_Image_ClassifierApp.swift; sourceTree = "<group>"; };
+		8C3CD00625BBAFA7005B6CCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8C3CD00825BBAFA8005B6CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C3CD00B25BBAFA9005B6CCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C3CD00D25BBAFA9005B6CCE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8C3CD01025BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Infinite_Image_Classifier.xcdatamodel; sourceTree = "<group>"; };
+		8C3CD01225BBAFA9005B6CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C3CD01925BBAFEC005B6CCE /* supportingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supportingFunctions.swift; sourceTree = "<group>"; };
+		8C3CD01C25BBB0BA005B6CCE /* MakeImageClassifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeImageClassifierView.swift; sourceTree = "<group>"; };
+		8C3CD02325BBB333005B6CCE /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		8C3CD02425BBB333005B6CCE /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		8C3CD02525BBB333005B6CCE /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		8C3CD02625BBB333005B6CCE /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		8C3CD02725BBB333005B6CCE /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		8C3CD02825BBB333005B6CCE /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		8C3CD02925BBB333005B6CCE /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		8C3CD02A25BBB333005B6CCE /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		8C3CD02B25BBB333005B6CCE /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		8C3CD02C25BBB333005B6CCE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		8C3CD0A125BBBE29005B6CCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EE20E73BC63815352F56660 /* Pods-Infinite Image Classifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infinite Image Classifier.debug.xcconfig"; path = "Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier.debug.xcconfig"; sourceTree = "<group>"; };
+		B4C3832C3792DA426A4F4BC8 /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C3CCFFE25BBAFA7005B6CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2E85BA25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Frameworks */,
+				8C3CD06B25BBB9B0005B6CCE /* SwiftUIX in Frameworks */,
+				8C3CD06725BBB95B005B6CCE /* URLImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C7A08884432A3ED78E9D8EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */,
+				8C2E85B525BC748E0093086A /* Pods_Infinite_Image_Classifier.framework */,
+				B4C3832C3792DA426A4F4BC8 /* Pods_Infinite_Image_Classifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A62ECB2DBA95E9CADAAAFC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EE20E73BC63815352F56660 /* Pods-Infinite Image Classifier.debug.xcconfig */,
+				4B7CC93F53C0C1E63684675D /* Pods-Infinite Image Classifier.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C3CCFF825BBAFA7005B6CCE = {
+			isa = PBXGroup;
+			children = (
+				8C3CD00325BBAFA7005B6CCE /* Infinite Image Classifier */,
+				8C3CD00225BBAFA7005B6CCE /* Products */,
+				2A62ECB2DBA95E9CADAAAFC7 /* Pods */,
+				1C7A08884432A3ED78E9D8EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C3CD00225BBAFA7005B6CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C3CD00125BBAFA7005B6CCE /* Infinite Image Classifier.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C3CD00325BBAFA7005B6CCE /* Infinite Image Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				8C3CD0A125BBBE29005B6CCE /* GoogleService-Info.plist */,
+				8C3CD02225BBB333005B6CCE /* Fonts */,
+				8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */,
+				8C3CD00625BBAFA7005B6CCE /* ContentView.swift */,
+				8C3CD01C25BBB0BA005B6CCE /* MakeImageClassifierView.swift */,
+				8C3CD01925BBAFEC005B6CCE /* supportingFunctions.swift */,
+				8C3CD00825BBAFA8005B6CCE /* Assets.xcassets */,
+				8C3CD00D25BBAFA9005B6CCE /* Persistence.swift */,
+				8C3CD01225BBAFA9005B6CCE /* Info.plist */,
+				8C3CD00F25BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodeld */,
+				8C3CD00A25BBAFA9005B6CCE /* Preview Content */,
+			);
+			path = "Infinite Image Classifier";
+			sourceTree = "<group>";
+		};
+		8C3CD00A25BBAFA9005B6CCE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8C3CD00B25BBAFA9005B6CCE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C3CD02225BBB333005B6CCE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8C3CD02325BBB333005B6CCE /* OpenSans-SemiBold.ttf */,
+				8C3CD02425BBB333005B6CCE /* Montserrat-Medium.ttf */,
+				8C3CD02525BBB333005B6CCE /* SF-Pro-Display-Bold.otf */,
+				8C3CD02625BBB333005B6CCE /* Montserrat-Light.ttf */,
+				8C3CD02725BBB333005B6CCE /* OpenSans-Light.ttf */,
+				8C3CD02825BBB333005B6CCE /* Montserrat-Bold.ttf */,
+				8C3CD02925BBB333005B6CCE /* Montserrat-SemiBold.ttf */,
+				8C3CD02A25BBB333005B6CCE /* OpenSans-Bold.ttf */,
+				8C3CD02B25BBB333005B6CCE /* Montserrat-Regular.ttf */,
+				8C3CD02C25BBB333005B6CCE /* OpenSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C3CD00025BBAFA7005B6CCE /* Infinite Image Classifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C3CD01525BBAFA9005B6CCE /* Build configuration list for PBXNativeTarget "Infinite Image Classifier" */;
+			buildPhases = (
+				2EAD4239D48CF7FF4C97F83E /* [CP] Check Pods Manifest.lock */,
+				8C3CCFFD25BBAFA7005B6CCE /* Sources */,
+				8C3CCFFE25BBAFA7005B6CCE /* Frameworks */,
+				8C3CCFFF25BBAFA7005B6CCE /* Resources */,
+				A6EF055F7CBBD995AB20CB79 /* [CP] Embed Pods Frameworks */,
+				8C2E85BC25BC74AC0093086A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Infinite Image Classifier";
+			packageProductDependencies = (
+				8C3CD06625BBB95B005B6CCE /* URLImage */,
+				8C3CD06A25BBB9B0005B6CCE /* SwiftUIX */,
+			);
+			productName = "Infinite Image Classifier";
+			productReference = 8C3CD00125BBAFA7005B6CCE /* Infinite Image Classifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C3CCFF925BBAFA7005B6CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					8C3CD00025BBAFA7005B6CCE = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 8C3CCFFC25BBAFA7005B6CCE /* Build configuration list for PBXProject "Infinite Image Classifier" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C3CCFF825BBAFA7005B6CCE;
+			packageReferences = (
+				8C3CD06525BBB95B005B6CCE /* XCRemoteSwiftPackageReference "url-image" */,
+				8C3CD06925BBB9B0005B6CCE /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
+			productRefGroup = 8C3CD00225BBAFA7005B6CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C3CD00025BBAFA7005B6CCE /* Infinite Image Classifier */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C3CCFFF25BBAFA7005B6CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3CD0A225BBBE29005B6CCE /* GoogleService-Info.plist in Resources */,
+				8C3CD03025BBB333005B6CCE /* Montserrat-Light.ttf in Resources */,
+				8C3CD03525BBB333005B6CCE /* Montserrat-Regular.ttf in Resources */,
+				8C3CD00C25BBAFA9005B6CCE /* Preview Assets.xcassets in Resources */,
+				8C3CD03125BBB333005B6CCE /* OpenSans-Light.ttf in Resources */,
+				8C3CD02F25BBB333005B6CCE /* SF-Pro-Display-Bold.otf in Resources */,
+				8C3CD03225BBB333005B6CCE /* Montserrat-Bold.ttf in Resources */,
+				8C3CD02D25BBB333005B6CCE /* OpenSans-SemiBold.ttf in Resources */,
+				8C3CD03325BBB333005B6CCE /* Montserrat-SemiBold.ttf in Resources */,
+				8C3CD02E25BBB333005B6CCE /* Montserrat-Medium.ttf in Resources */,
+				8C3CD03425BBB333005B6CCE /* OpenSans-Bold.ttf in Resources */,
+				8C3CD03625BBB333005B6CCE /* OpenSans-Regular.ttf in Resources */,
+				8C3CD00925BBAFA8005B6CCE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EAD4239D48CF7FF4C97F83E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Infinite Image Classifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6EF055F7CBBD995AB20CB79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C3CCFFD25BBAFA7005B6CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3CD00E25BBAFA9005B6CCE /* Persistence.swift in Sources */,
+				8C3CD01D25BBB0BA005B6CCE /* MakeImageClassifierView.swift in Sources */,
+				8C3CD00725BBAFA7005B6CCE /* ContentView.swift in Sources */,
+				8C3CD01A25BBAFEC005B6CCE /* supportingFunctions.swift in Sources */,
+				8C3CD01125BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodeld in Sources */,
+				8C3CD00525BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8C3CD01325BBAFA9005B6CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C3CD01425BBAFA9005B6CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C3CD01625BBAFA9005B6CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE20E73BC63815352F56660 /* Pods-Infinite Image Classifier.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Infinite Image Classifier/Preview Content\"";
+				DEVELOPMENT_TEAM = CUA3BVMUR5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Infinite Image Classifier/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandu.Infinite-Image-Classifier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C3CD01725BBAFA9005B6CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7CC93F53C0C1E63684675D /* Pods-Infinite Image Classifier.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Infinite Image Classifier/Preview Content\"";
+				DEVELOPMENT_TEAM = CUA3BVMUR5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Infinite Image Classifier/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryandu.Infinite-Image-Classifier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C3CCFFC25BBAFA7005B6CCE /* Build configuration list for PBXProject "Infinite Image Classifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3CD01325BBAFA9005B6CCE /* Debug */,
+				8C3CD01425BBAFA9005B6CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C3CD01525BBAFA9005B6CCE /* Build configuration list for PBXNativeTarget "Infinite Image Classifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3CD01625BBAFA9005B6CCE /* Debug */,
+				8C3CD01725BBAFA9005B6CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C3CD06525BBB95B005B6CCE /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
+		8C3CD06925BBB9B0005B6CCE /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C3CD06625BBB95B005B6CCE /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C3CD06525BBB95B005B6CCE /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		8C3CD06A25BBB9B0005B6CCE /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C3CD06925BBB9B0005B6CCE /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8C3CD00F25BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C3CD01025BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodel */,
+			);
+			currentVersion = 8C3CD01025BBAFA9005B6CCE /* Infinite_Image_Classifier.xcdatamodel */;
+			path = Infinite_Image_Classifier.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8C3CCFF925BBAFA7005B6CCE /* Project object */;
+}
