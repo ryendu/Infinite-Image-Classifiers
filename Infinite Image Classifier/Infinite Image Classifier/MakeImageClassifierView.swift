@@ -74,17 +74,17 @@ struct ImageClassifierMMLView: View {
                     }, infoToShow: "Aiology's Image classification template uses transfer learning which takes what other more powerful image classifiers have learned and apply that to your image classifier. Epochs with base frozen determines the number of iterations the model learns while not changing what the more powerful image classifier learned. After that, it will train for to finetune the result. It is recommended to keep the Epochs with base frozen to atleast 10 and up to 20 epochs.").padding(.horizontal).padding(.leading)
                     
                     NavigationLink(destination: TrainingObserveView(trainingDocID: self.trainingDocID),isActive: self.$showNextViewAndTrain, label: {
-                            Button(action: {
-                                self.buttonDisabled = true
-                                trainingImageClassifier(name: self.name, input: self.input, epochs: self.epochs, uploadedForTraining: {id in
-                                    self.trainingDocID = id
-                                    self.showNextViewAndTrain = true
-                                    self.buttonDisabled = false
-                                },frozenEpochs: self.frozenEpochs)
-                            }, label: {
-                                NavyFilledBigTextButton(text: "Train", cornerRadius: 4)
-                            }).disabled(self.buttonDisabled)
-                        })
+                        Button(action: {
+                            self.buttonDisabled = true
+                            trainingImageClassifier(name: self.name, input: self.input, epochs: self.epochs, uploadedForTraining: {id in
+                                self.trainingDocID = id
+                                self.showNextViewAndTrain = true
+                                self.buttonDisabled = false
+                            },frozenEpochs: self.frozenEpochs)
+                        }, label: {
+                            NavyFilledBigTextButton(text: "Train", cornerRadius: 4)
+                        }).disabled(self.buttonDisabled)
+                    })
                 }
             }.navigationTitle("Image Classifier")
             
@@ -114,31 +114,31 @@ struct ImageClassifierClassView:View{
         VStack{
             Group{
                 Group{
-                GrayTextFieldCard(placeholderText: "Image Class Label", text: self.$MLICClass.className, didUpdateValue: {}).padding(.top)
+                    GrayTextFieldCard(placeholderText: "Image Class Label", text: self.$MLICClass.className, didUpdateValue: {}).padding(.top)
                 }
-                    .onTapGesture {}
-                    .gesture(LongPressGesture().onEnded{_ in
-                        simpleSuccessHapticOnly()
-                        self.showDeleteClassAS.toggle()
-                    })
-                    .actionSheet(isPresented: self.$showDeleteClassAS,content:{
-                        ActionSheet(title: Text("Delete This Class?"),message: Text("Are you sure you want to delete this class?"),buttons: [
-                            .destructive(Text("Delete"), action: {
-                                if let indx = self.input.firstIndex(of: self.MLICClass){
-                                    self.input.remove(at: indx)
-                                }
-                            })
-                            ,.cancel()
-                        ])
-                    })
+                .onTapGesture {}
+                .gesture(LongPressGesture().onEnded{_ in
+                    simpleSuccessHapticOnly()
+                    self.showDeleteClassAS.toggle()
+                })
+                .actionSheet(isPresented: self.$showDeleteClassAS,content:{
+                    ActionSheet(title: Text("Delete This Class?"),message: Text("Are you sure you want to delete this class?"),buttons: [
+                        .destructive(Text("Delete"), action: {
+                            if let indx = self.input.firstIndex(of: self.MLICClass){
+                                self.input.remove(at: indx)
+                            }
+                        })
+                        ,.cancel()
+                    ])
+                })
                 
                 Group{
                     LazyVGrid(columns: columns, spacing: 0) {
                         ForEach(self.MLICClass.items, id: \.self) { item in
                             Group{
-                            if item != nil{
-                                Image(uiImage: item!).resizable().frame(width: 65, height: 65).padding()
-                            }
+                                if item != nil{
+                                    Image(uiImage: item!).resizable().frame(width: 65, height: 65).padding()
+                                }
                             }
                             .onTapGesture {}
                             .gesture(LongPressGesture().onEnded{_ in
@@ -180,9 +180,9 @@ extension Binding where Value: MutableCollection, Value.Index == Int {
         return Binding<Value.Element>(
             get: {
                 return self.wrappedValue[idx]
-        }, set: { (value: Value.Element) -> () in
-            self.wrappedValue[idx] = value
-        })
+            }, set: { (value: Value.Element) -> () in
+                self.wrappedValue[idx] = value
+            })
     }
 }
 struct GrayTextFieldCard: View {
@@ -197,7 +197,7 @@ struct GrayTextFieldCard: View {
                 .onChange(of: self.text, perform:{ value in
                     didUpdateValue()
                 })
-                
+            
         }
         .frame(minHeight: 16, idealHeight: 16)
         .padding()
@@ -215,22 +215,22 @@ struct GrayTextCard: View {
     @State var color: Color?
     var body: some View {
         Group{
-        HStack{
-            Spacer()
-            Text(text)
-                .font(.custom("OpenSans-SemiBold", size: 14))
-                .foregroundColor(self.color == nil ? .accentColor : self.color!)
-
-            Spacer()
+            HStack{
+                Spacer()
+                Text(text)
+                    .font(.custom("OpenSans-SemiBold", size: 14))
+                    .foregroundColor(self.color == nil ? .accentColor : self.color!)
+                
+                Spacer()
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(minHeight: 16)
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundColor(Color("secondaryBackground"))
+            )
         }
-        .fixedSize(horizontal: false, vertical: true)
-        .frame(minHeight: 16)
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(Color("secondaryBackground"))
-        )
-    }
         .padding(.horizontal)
         .padding(.vertical, 5)
         .fixedSize(horizontal: false, vertical: true)
@@ -252,9 +252,9 @@ struct MultiImagePicker: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<MultiImagePicker>) -> TatsiPickerViewController {
         return picker
     }
-
+    
     func updateUIViewController(_ uiViewController: TatsiPickerViewController, context: UIViewControllerRepresentableContext<MultiImagePicker>) {
-
+        
     }
     
     func makeCoordinator() -> Coordinator {
@@ -278,7 +278,7 @@ struct MultiImagePicker: UIViewControllerRepresentable {
         }
         
         let parent: MultiImagePicker
-
+        
         init(_ parent: MultiImagePicker) {
             self.parent = parent
             super.init()
@@ -299,7 +299,7 @@ extension PHAsset{
         options.version = .original
         options.isSynchronous = true
         manager.requestImageData(for: self, options: options) { data, _, _, _ in
-
+            
             if let data = data {
                 img = UIImage(data: data)
             }
@@ -315,7 +315,7 @@ struct GrayNumberStepperCard: View {
     @Binding var value: Int
     @State var step: Int
     @State var didUpdateValue: ()->Void
-
+    
     var body: some View {
         HStack{
             Text("\(text): \(self.value)")
@@ -323,9 +323,9 @@ struct GrayNumberStepperCard: View {
                 .foregroundColor(.accentColor)
                 .minimumScaleFactor(0.8)
             Spacer()
-
+            
             Stepper(value: $value, in: lowerRange...upperRange, step: step) {
-
+                
             }.labelsHidden()
             .onChange(of: self.value, perform:{ value in
                 didUpdateValue()
@@ -358,9 +358,9 @@ struct GrayNumberStepperCardWithInfo: View {
                 .foregroundColor(.accentColor)
                 .minimumScaleFactor(0.8)
             Spacer()
-
+            
             Stepper(value: $value, in: lowerRange...upperRange, step: step) {
-
+                
             }.labelsHidden()
             .onChange(of: self.value, perform:{ value in
                 didUpdateValue()
@@ -423,11 +423,11 @@ struct NavyFilledBigTextButton: View {
         VStack{
             HStack{
                 Spacer()
-            Text(text)
-                .foregroundColor(.white)
-                .font(.custom("Montserrat-SemiBold", size: 18))
-                .padding()
-
+                Text(text)
+                    .foregroundColor(.white)
+                    .font(.custom("Montserrat-SemiBold", size: 18))
+                    .padding()
+                
                 Spacer()
             }
             .background(
@@ -437,7 +437,7 @@ struct NavyFilledBigTextButton: View {
                     .padding()
             )
         }
-//        .padding(.horizontal)
+        //        .padding(.horizontal)
     }
 }
 
@@ -465,10 +465,10 @@ struct TrainingObserveView: View {
                 ProgressView(value: progress).padding(.horizontal)
                 GrayBindingTextCard(text: $status)
                 if self.isDone{
-                                    NavigationLink(destination: AfterTrainingView(trainingDocID: self.trainingDocID), label: {
-                                        NavyFilledBigTextButton(text: "Continue", cornerRadius: 4)
-                                    })
-                                }
+                    NavigationLink(destination: AfterTrainingView(trainingDocID: self.trainingDocID), label: {
+                        NavyFilledBigTextButton(text: "Continue", cornerRadius: 4)
+                    })
+                }
                 
                 if self.trainingDocData?["type"] as? String != nil{
                     if self.trainingDocData?["type"] as! String == "imageClassifier" || self.trainingDocData?["type"] as! String == "imageRegressor"{
@@ -598,7 +598,7 @@ struct GrayChevronToggleCard: View {
             }, label: {
                 Image(systemName: "chevron.up").rotationEffect(Angle(degrees: self.toggle ? 180 : 0))
             })
-
+            
         }.frame(minHeight: 16, idealHeight: 16)
         .padding()
         .background(
@@ -612,25 +612,25 @@ struct GrayChevronToggleCard: View {
 
 struct GrayBindingTextCard: View {
     @Binding var text: String
-
+    
     var body: some View {
         Group{
-        HStack{
-            Spacer()
-            Text(text)
-                .font(.custom("OpenSans-SemiBold", size: 14))
-                .foregroundColor(.accentColor)
-
-            Spacer()
+            HStack{
+                Spacer()
+                Text(text)
+                    .font(.custom("OpenSans-SemiBold", size: 14))
+                    .foregroundColor(.accentColor)
+                
+                Spacer()
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(minHeight: 16)
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundColor(Color("secondaryBackground"))
+            )
         }
-        .fixedSize(horizontal: false, vertical: true)
-        .frame(minHeight: 16)
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(Color("secondaryBackground"))
-        )
-    }
         .padding(.horizontal)
         .padding(.vertical, 5)
         .fixedSize(horizontal: false, vertical: true)
@@ -642,59 +642,59 @@ struct GrayBindingAccAndLossCard: View {
     @Binding var loss: Double?
     var body: some View {
         if self.acc != nil || self.loss != nil{
-        Group{
-        HStack{
-            Spacer()
-            if self.acc != nil{
-                Text("Accuracy: \((self.acc! * 100).rounded())%")
-                    .font(.custom("OpenSans-SemiBold", size: 14))
-                    .foregroundColor(.accentColor)
+            Group{
+                HStack{
+                    Spacer()
+                    if self.acc != nil{
+                        Text("Accuracy: \((self.acc! * 100).rounded())%")
+                            .font(.custom("OpenSans-SemiBold", size: 14))
+                            .foregroundColor(.accentColor)
+                    }
+                    if self.loss != nil{
+                        Text("Loss: \(self.loss!)")
+                            .font(.custom("OpenSans-SemiBold", size: 14))
+                            .foregroundColor(.accentColor)
+                    }
+                    
+                    
+                    Spacer()
+                }
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 16)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .foregroundColor(Color("secondaryBackground"))
+                )
             }
-            if self.loss != nil{
-                Text("Loss: \(self.loss!)")
-                    .font(.custom("OpenSans-SemiBold", size: 14))
-                    .foregroundColor(.accentColor)
-            }
-            
-
-            Spacer()
-        }
-        .fixedSize(horizontal: false, vertical: true)
-        .frame(minHeight: 16)
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(Color("secondaryBackground"))
-        )
-    }
-        .padding(.horizontal)
-        .padding(.vertical, 5)
-        .fixedSize(horizontal: false, vertical: true)
+            .padding(.horizontal)
+            .padding(.vertical, 5)
+            .fixedSize(horizontal: false, vertical: true)
         }
     }
 }
 
 struct GraySmallTextCard: View {
     @State var text: String
-
+    
     var body: some View {
         Group{
-        HStack{
-            Spacer()
-            Text(text)
-                .font(.custom("OpenSans-SemiBold", size: 11))
-                .foregroundColor(.accentColor)
-
-            Spacer()
+            HStack{
+                Spacer()
+                Text(text)
+                    .font(.custom("OpenSans-SemiBold", size: 11))
+                    .foregroundColor(.accentColor)
+                
+                Spacer()
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(minHeight: 16)
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 4)
+                    .foregroundColor(Color("secondaryBackground"))
+            )
         }
-        .fixedSize(horizontal: false, vertical: true)
-        .frame(minHeight: 16)
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(Color("secondaryBackground"))
-        )
-    }
         .padding(.horizontal)
         .padding(.vertical, 5)
         .fixedSize(horizontal: false, vertical: true)
@@ -704,29 +704,53 @@ struct GraySmallTextCard: View {
 struct AfterTrainingView: View {
     @State var trainingDocID: String
     @State var docData: [String:Any] = [:]
+    @FetchRequest(entity: ImageClassifierCD.entity(), sortDescriptors: []) var imageClassifierCDs: FetchedResults<ImageClassifierCD>
+    @Environment(\.managedObjectContext) var moc
+    
+    
     var body: some View {
         ScrollView{
             VStack{
                 Divider().padding()
-                Text("Congrats 🎉! You just finished training your ML Model! Yes, go out there and do whatever you want with it but first, save it and export it!")
+                Text("Congrats 🎉! You just finished training your ML Model! Once you click Save and Finish, your Image Classifier will be saved on your device and you can find it in your ML Portfolio.")
                     .font(.custom("OpenSans-Regular", size: 15)).padding().padding(.horizontal)
                 
                 
                 GrayExportModelCard(docData: self.$docData, type: DownloadModelType.mlmodel).padding(.horizontal)
                 
                 NavigationLink(destination: ContentView(), label: {
-                    NavyFilledBigTextButton(text: "Done", cornerRadius: 4)
+                    NavyFilledBigTextButton(text: "Save and Finish", cornerRadius: 4)
                 }).simultaneousGesture(TapGesture().onEnded({
-                    if let type = self.docData["type"] as? String{
-                            let trainingDatasetUUID = self.docData["trainingDatasetUUID"] as? String ?? "nonexistent"
+                    //TODO: SAVE IN COREDADA
+                    
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: self.docData, options: .prettyPrinted)
+                        let newICCD = ImageClassifierCD(context: self.moc)
+                        newICCD.docData = jsonData
+                        guard let nm = self.docData["name"] as? String else {return}
+                        newICCD.name = nm
+                        downloadMLModel_(type: .mlmodel, docData: self.docData, gotData: {data in
+                            newICCD.model = data
+                            try? self.moc.save()
+                            
+                            if let type = self.docData["type"] as? String{
+                                let trainingDatasetUUID = self.docData["trainingDatasetUUID"] as? String ?? "nonexistent"
                                 let modelStorageUUID = self.docData["modelStorageUUID"] as? String ?? "None"
                                 Functions.functions().httpsCallable("deleteTrainModelDontSaveOnAiology").call([
                                     "trainingDatasetUUID": trainingDatasetUUID,"modelStorageUUID": modelStorageUUID,"type": type,"docID": self.trainingDocID
                                 ]) { _,_ in }
                                 Firestore.firestore().collection("TrainingModels").document(self.trainingDocID).delete()
-                            
+                                
+                            }
+                            NotificationCenter.default.post(name: .dismissTrainObserveSheet, object: nil)
+                        })
+                        
+                    } catch {
+                        print(error.localizedDescription)
                     }
-                    NotificationCenter.default.post(name: .dismissTrainObserveSheet, object: nil)
+                    
+                    
+                    
                 }))
             }
         }
@@ -743,6 +767,24 @@ struct AfterTrainingView: View {
             })
         }
         
+    }
+}
+
+func downloadMLModel_(type:DownloadModelType,docData:[String:Any],gotData:@escaping (Data)->Void){
+    if let modelPath = docData["mlmodelPath"] as? String{
+        print("got model path")
+        DispatchQueue.main.async {
+            let documentsDirectoryURL = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let file2ShareURL = documentsDirectoryURL.appendingPathComponent("model.mlmodel")
+            let pathReference = Storage.storage().reference(withPath: "CompletedModels/\(modelPath)")
+            pathReference.downloadURL(completion: {url, error in
+                if let url = url{
+                    guard let data = try? Data(contentsOf: url) else {return}
+                    gotData(data)
+                }
+            })
+        }
+    }else{
     }
 }
 
@@ -778,27 +820,27 @@ struct GrayExportModelCard: View {
             })
         },label:{
             Group{
-            VStack{
-                HStack{
-                    Spacer()
-                    Text(self.type == DownloadModelType.h5 ? "Export .h5 File" : "Export .mlmodel File")
-                        .font(.custom("OpenSans-SemiBold", size: 14))
-                        .foregroundColor(.accentColor)
-
-                    Spacer()
+                VStack{
+                    HStack{
+                        Spacer()
+                        Text(self.type == DownloadModelType.h5 ? "Export .h5 File" : "Export .mlmodel File")
+                            .font(.custom("OpenSans-SemiBold", size: 14))
+                            .foregroundColor(.accentColor)
+                        
+                        Spacer()
+                    }
+                    if self.progress > 0{
+                        ProgressView(value: self.progress,total:1).progressViewStyle(LinearProgressViewStyle())
+                    }
                 }
-                if self.progress > 0{
-                    ProgressView(value: self.progress,total:1).progressViewStyle(LinearProgressViewStyle())
-                }
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 16)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .foregroundColor(Color("secondaryBackground"))
+                )
             }
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(minHeight: 16)
-            .padding()
-            .background(
-                RoundedRectangle(cornerRadius: 4)
-                    .foregroundColor(Color("secondaryBackground"))
-            )
-        }
             .padding(.horizontal)
             .padding(.vertical, 5)
             .fixedSize(horizontal: false, vertical: true)
@@ -816,16 +858,16 @@ enum DownloadModelType{
 }
 
 struct ActivityViewController: UIViewControllerRepresentable {
-
+    
     var activityItems: [Any]
     var applicationActivities: [UIActivity]? = nil
-
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityViewController>) -> UIActivityViewController {
         let controller = UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
         return controller
     }
-
+    
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityViewController>) {}
-
+    
 }
 

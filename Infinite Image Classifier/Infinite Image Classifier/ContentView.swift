@@ -20,7 +20,7 @@ struct ContentView: View{
                 Divider().padding()
                 LazyVGrid(columns: columns, spacing: 20) {
                     NavigationLink(destination: ImageClassifierPortolioView(), label: {
-                        Card(icon:"books.vertical",text:"Image Classifier Portfolio")
+                        Card(icon:"books.vertical",text:"Machine Learning Portfolio")
                     })
                     
                     NavigationLink(destination: ImageClassifierMMLView(), label: {
@@ -40,12 +40,21 @@ struct ContentView: View{
 }
 
 struct ImageClassifierPortolioView:View {
+    @FetchRequest(entity: ImageClassifierCD.entity(), sortDescriptors: []) var imageClassifierCDs: FetchedResults<ImageClassifierCD>
+    @Environment(\.managedObjectContext) var moc
     var body: some View{
         VStack{
-            
-        }.navigationBarTitle(Text("My IC Portfolio"))
+            ForEach(self.imageClassifierCDs,id:\.self){imgClassifier in
+                //TODO: LINK TO USE ML AND MAKE PRETTY
+                Text(imgClassifier.name ?? "no name")
+            }
+        }.navigationBarTitle(Text("My ML Portfolio"))
     }
 }
+
+
+
+
 struct Card: View{
     var icon: String
     var text: String

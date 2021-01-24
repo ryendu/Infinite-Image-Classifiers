@@ -1,6 +1,9 @@
 AdminServiceAccountKey.json
+serviceAccountKey.json
 tmp/
 env/
 /env/
-app/MLTrainers/resources/tiny_bert-1/
-/app/MLTrainers/resources/tiny_bert-1/
+/Design/
+Design/
+/backend/app/serviceAccountKey.json
+backend/app/serviceAccountKey.json
