@@ -14,6 +14,15 @@ To train a Image Classifier with Infinite Image Classifiers, simply follow these
 4. select the number of iterations to train the ml model for
 5. sit back, relax, see how its doing, and within no time the image classifier will be ready for you to save and use!
 
+## Want to Run Infinite Image Classifiers on your machine?
+ Theres are a few things you have to modify first. Heres a simple checklist:
+ 1. clone the repo
+ 2. place your GoogleService-Info.plist from your own Firebase Project at Infinite-Image-Classifiers/Infinite Image Classifier/Infinite Image Classifier/
+ 3. place your GCP serviceAccountKey.json in the directory Infinite-Image-Classifiers/Backend/app/
+ 4. place your Firebase-admin AdminServiceAccountKey.json in the directory Infinite-Image-Classifiers/Backend/app/
+ 5. then, you can run it locally, dockerise it, build the app in xcode, etc.
+
+
 ## How does it work
 To create a image classifier, The following happens:
 1. the user opens the app then setup a image classifier by naming it, selecting and labeling a few photos, and sets the iteration amount
