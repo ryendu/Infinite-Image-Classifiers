@@ -20,12 +20,10 @@ ADD . /app
 
 RUN mkdir -p app/tmp
 RUN mkdir -p app/tmp/finishedModels
-RUN mkdir -p app/tmp/visualization
 EXPOSE 5000
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
 RUN useradd appuser && chown -R appuser /app
 USER appuser
 
-# ENTRYPOINT ["gunicorn","--chdir","app","main:app","-w","2","--threads","2","-b","0.0.0.0:5000"]
 ENTRYPOINT ["gunicorn","--chdir","app","main:app","-b","0.0.0.0:5000"]
