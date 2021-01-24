@@ -1,5 +1,6 @@
 # Infinite-Image-Classifiers
 > An easy, simple to use interface to train and use Image Classifiers
+
 I did host the backend on GCP but now i can only run it on my local machine (because I ran out of the GCP free trial tokens) so at this time it is not possible for you to quickly try it out.
 
 Here is the [Demo Video](https://youtu.be/Dl-M3mMAYnc)
