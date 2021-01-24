@@ -1,9 +1,9 @@
-AdminServiceAccountKey.json
-serviceAccountKey.json
+AdminServiceAccountKey.*
+serviceAccountKey.*
 tmp/
 env/
 /env/
 /Design/
 Design/
-/backend/app/serviceAccountKey.json
-backend/app/serviceAccountKey.json
+/Backend/app/serviceAccountKey.json
+Backend/app/serviceAccountKey.json
