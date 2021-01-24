@@ -1,6 +1,10 @@
 # Infinite-Image-Classifiers
 > An easy, simple to use interface to train and use Image Classifiers
-Click Here for the Video Demo.
+I did host the backend on GCP but now i can only run it on my local machine (because I ran out of the GCP free trial tokens) so at this time it is not possible for you to quickly try it out.
+
+Here is the [Demo Video](https://youtu.be/Dl-M3mMAYnc)
+
+
 ## How to use
 To train a Image Classifier with Infinite Image Classifiers, simply follow these steps:
 1. navigate to the create image classifier view by clicking "Create Image Classifier" from the home screen
@@ -8,11 +12,6 @@ To train a Image Classifier with Infinite Image Classifiers, simply follow these
 3. add a few classes to classify images into then select images to add to those classes
 4. select the number of iterations to train the ml model for
 5. sit back, relax, see how its doing, and within no time the image classifier will be ready for you to save and use!
-
-### Try it out quickly 
-> for the Judge(s) of the Hack Your Portfolio Hackathon
-
-Hello there **Judge(s)**! For you to quikly try it out, click on this link on an iOS device (Be aware that the link is only avalible for one device).
 
 ## How does it work
 To create a image classifier, The following happens:
