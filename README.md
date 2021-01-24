@@ -40,13 +40,5 @@ There were a few parts of the project that I made before the hacakthon. That inc
 - Swift / SwiftUI for the app
 - Firebase
 
-## Want to Run Infinite Image Classifiers on your machine?
-Theres are a few things you have to modify first. Heres a simple checklist:
-1. clone the repo
-2. place your GoogleService-Info.plist from your own Firebase Project at Infinite-Image-Classifiers/Infinite Image Classifier/Infinite Image Classifier/
-3. place your GCP serviceAccountKey.json in the directory Infinite-Image-Classifiers/Backend/app/
-4. place your Firebase-admin AdminServiceAccountKey.json in the directory Infinite-Image-Classifiers/Backend/app/
-5. then, you can run it locally, dockerise it, build the app in xcode, etc.
-
 ## A little about me
 My name is Ryan and I am a 14 year old teenager from Atlanta, Georgia in the 8th grade. I started learning programing two years ago, but I've only been really focused and into it starting from the Begining of Quarentine (March 2020). My skills include: Python, Swift, SwiftUI, Tensorflow with keras, Sklearn, and a little bit of javascript. You could reach out to me at ryandu9221@gmail.com
