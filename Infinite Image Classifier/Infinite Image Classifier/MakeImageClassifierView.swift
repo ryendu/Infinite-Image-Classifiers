@@ -80,7 +80,19 @@ struct ImageClassifierMMLView: View {
                                 self.trainingDocID = id
                                 self.showNextViewAndTrain = true
                                 self.buttonDisabled = false
+                                
+                                var request = URLRequest(url: URL(string: "http://0.0.0.0:5000/trainImageClassifier?id=\(id)")!)
+                                request.httpMethod = "GET"
+
+                                let session = URLSession.shared
+                                let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+                                    print(response!)
+                                })
+                                task.resume()
                             },frozenEpochs: self.frozenEpochs)
+                            
+                            
+                            
                         }, label: {
                             NavyFilledBigTextButton(text: "Train", cornerRadius: 4)
                         }).disabled(self.buttonDisabled)
@@ -529,7 +541,7 @@ struct TrainingObserveView: View {
                 })
                 
             }
-        }.navigationBarBackButtonHidden(true)
+        }
     }
 }
 
@@ -724,15 +736,24 @@ struct AfterTrainingView: View {
                     //TODO: SAVE IN COREDADA
                     
                     do {
+                        print(1)
                         let jsonData = try JSONSerialization.data(withJSONObject: self.docData, options: .prettyPrinted)
+                        print(2)
                         let newICCD = ImageClassifierCD(context: self.moc)
+                        print(3)
                         newICCD.docData = jsonData
+                        print(4)
+                        newICCD.id = UUID()
                         guard let nm = self.docData["name"] as? String else {return}
+                        print(5)
                         newICCD.name = nm
+                        print(6)
                         downloadMLModel_(type: .mlmodel, docData: self.docData, gotData: {data in
+                            print(7)
                             newICCD.model = data
+                            print(8)
                             try? self.moc.save()
-                            
+
                             if let type = self.docData["type"] as? String{
                                 let trainingDatasetUUID = self.docData["trainingDatasetUUID"] as? String ?? "nonexistent"
                                 let modelStorageUUID = self.docData["modelStorageUUID"] as? String ?? "None"
@@ -740,11 +761,11 @@ struct AfterTrainingView: View {
                                     "trainingDatasetUUID": trainingDatasetUUID,"modelStorageUUID": modelStorageUUID,"type": type,"docID": self.trainingDocID
                                 ]) { _,_ in }
                                 Firestore.firestore().collection("TrainingModels").document(self.trainingDocID).delete()
-                                
+
                             }
                             NotificationCenter.default.post(name: .dismissTrainObserveSheet, object: nil)
                         })
-                        
+
                     } catch {
                         print(error.localizedDescription)
                     }
@@ -756,6 +777,7 @@ struct AfterTrainingView: View {
         }
         .navigationTitle(Text("Saving"))
         .onAppear{
+            print("APPEARED AFTER")
             let trainDocRef = Firestore.firestore().collection("TrainingModels").document(self.trainingDocID)
             trainDocRef.getDocument(completion: {document, error in
                 if let error = error{

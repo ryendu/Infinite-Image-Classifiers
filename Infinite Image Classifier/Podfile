@@ -7,10 +7,9 @@ target 'Infinite Image Classifier' do
 
   # Pods for Infinite Image Classifier
   pod 'Tatsi'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'
-  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Firestore', '7.2-M1'
+  pod 'Firebase/Storage', '7.2-M1'
   pod 'UnsplashPhotoPicker', '~> 1.1.1'
-  pod 'Firebase/Functions'
-  pod 'Firebase/Analytics'
+  pod 'Firebase/Functions', '7.2-M1'
+  pod 'Firebase/Analytics', '7.2-M1'
 end

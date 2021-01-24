@@ -134,6 +134,7 @@ class ImageClassifierCallback(keras.callbacks.Callback):
 
             def on_train_end(self, logs):
                 keys = list(logs.keys())
+                self.model.save("app/tmp/finishedModels/tmpmodel.h5")
                 self.parent.parent.finished_and_upload(self.model, self.parent.convert_to_mlmodel)            
             
             def on_epoch_begin(self, epoch, logs):

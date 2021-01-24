@@ -2,10 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ImageClassifierCD" representedClassName="ImageClassifierCD" syncable="YES" codeGenerationType="class">
         <attribute name="docData" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="model" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ImageClassifierCD" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="ImageClassifierCD" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

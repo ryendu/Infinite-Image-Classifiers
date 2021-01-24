@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C2E85BA25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */; };
-		8C2E85BB25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C2D2E1A25BDA41500520851 /* Pods_Infinite_Image_Classifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D2E1925BDA41500520851 /* Pods_Infinite_Image_Classifier.framework */; };
+		8C2D2E1B25BDA41500520851 /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D2E1925BDA41500520851 /* Pods_Infinite_Image_Classifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C3CD00525BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */; };
 		8C3CD00725BBAFA7005B6CCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3CD00625BBAFA7005B6CCE /* ContentView.swift */; };
 		8C3CD00925BBAFA8005B6CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD00825BBAFA8005B6CCE /* Assets.xcassets */; };
@@ -29,16 +29,17 @@
 		8C3CD06725BBB95B005B6CCE /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3CD06625BBB95B005B6CCE /* URLImage */; };
 		8C3CD06B25BBB9B0005B6CCE /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 8C3CD06A25BBB9B0005B6CCE /* SwiftUIX */; };
 		8C3CD0A225BBBE29005B6CCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C3CD0A125BBBE29005B6CCE /* GoogleService-Info.plist */; };
+		8CDAD0B225BD9E7A00F46590 /* ImageClassifierWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDAD0B125BD9E7A00F46590 /* ImageClassifierWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8C2E85BC25BC74AC0093086A /* Embed Frameworks */ = {
+		8C2D2E1C25BDA41500520851 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C2E85BB25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */,
+				8C2D2E1B25BDA41500520851 /* Pods_Infinite_Image_Classifier.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4B7CC93F53C0C1E63684675D /* Pods-Infinite Image Classifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infinite Image Classifier.release.xcconfig"; path = "Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier.release.xcconfig"; sourceTree = "<group>"; };
+		8C2D2E1925BDA41500520851 /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2E85B525BC748E0093086A /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3CD00125BBAFA7005B6CCE /* Infinite Image Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infinite Image Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 		8C3CD02B25BBB333005B6CCE /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		8C3CD02C25BBB333005B6CCE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8C3CD0A125BBBE29005B6CCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CDAD0B125BD9E7A00F46590 /* ImageClassifierWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifierWrapper.swift; sourceTree = "<group>"; };
 		9EE20E73BC63815352F56660 /* Pods-Infinite Image Classifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Infinite Image Classifier.debug.xcconfig"; path = "Target Support Files/Pods-Infinite Image Classifier/Pods-Infinite Image Classifier.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3832C3792DA426A4F4BC8 /* Pods_Infinite_Image_Classifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Infinite_Image_Classifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C2E85BA25BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework in Frameworks */,
+				8C2D2E1A25BDA41500520851 /* Pods_Infinite_Image_Classifier.framework in Frameworks */,
 				8C3CD06B25BBB9B0005B6CCE /* SwiftUIX in Frameworks */,
 				8C3CD06725BBB95B005B6CCE /* URLImage in Frameworks */,
 			);
@@ -90,6 +93,7 @@
 		1C7A08884432A3ED78E9D8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C2D2E1925BDA41500520851 /* Pods_Infinite_Image_Classifier.framework */,
 				8C2E85B925BC74AC0093086A /* Pods_Infinite_Image_Classifier.framework */,
 				8C2E85B525BC748E0093086A /* Pods_Infinite_Image_Classifier.framework */,
 				B4C3832C3792DA426A4F4BC8 /* Pods_Infinite_Image_Classifier.framework */,
@@ -131,6 +135,7 @@
 				8C3CD02225BBB333005B6CCE /* Fonts */,
 				8C3CD00425BBAFA7005B6CCE /* Infinite_Image_ClassifierApp.swift */,
 				8C3CD00625BBAFA7005B6CCE /* ContentView.swift */,
+				8CDAD0B125BD9E7A00F46590 /* ImageClassifierWrapper.swift */,
 				8C3CD01C25BBB0BA005B6CCE /* MakeImageClassifierView.swift */,
 				8C3CD01925BBAFEC005B6CCE /* supportingFunctions.swift */,
 				8C3CD00825BBAFA8005B6CCE /* Assets.xcassets */,
@@ -178,7 +183,7 @@
 				8C3CCFFE25BBAFA7005B6CCE /* Frameworks */,
 				8C3CCFFF25BBAFA7005B6CCE /* Resources */,
 				A6EF055F7CBBD995AB20CB79 /* [CP] Embed Pods Frameworks */,
-				8C2E85BC25BC74AC0093086A /* Embed Frameworks */,
+				8C2D2E1C25BDA41500520851 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDAD0B225BD9E7A00F46590 /* ImageClassifierWrapper.swift in Sources */,
 				8C3CD01D25BBB0BA005B6CCE /* MakeImageClassifierView.swift in Sources */,
 				8C3CD00725BBAFA7005B6CCE /* ContentView.swift in Sources */,
 				8C3CD01A25BBAFEC005B6CCE /* supportingFunctions.swift in Sources */,
@@ -436,6 +442,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Infinite Image Classifier/Preview Content\"";
 				DEVELOPMENT_TEAM = CUA3BVMUR5;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
 				INFOPLIST_FILE = "Infinite Image Classifier/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

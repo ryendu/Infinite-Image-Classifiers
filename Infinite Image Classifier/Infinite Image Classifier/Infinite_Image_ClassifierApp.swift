@@ -27,7 +27,7 @@ struct Infinite_Image_ClassifierApp: App {
 
 class PersistenceManager {
   let persistentContainer: NSPersistentContainer = {
-      let container = NSPersistentContainer(name: "Infinite_Image_ClassifierApp")
+      let container = NSPersistentContainer(name: "Infinite_Image_Classifier")
       container.loadPersistentStores(completionHandler: { (storeDescription, error) in
           if let error = error as NSError? {
               fatalError("Unresolved error \(error), \(error.userInfo)")
