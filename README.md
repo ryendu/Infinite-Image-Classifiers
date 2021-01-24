@@ -24,13 +24,6 @@ To create a image classifier, The following happens:
 
 After the Image Classifer is saved on the app, the user can then go to the Machine Learning Portfolio page to find it, upload or take a photo, and use the image classifier to classify a new image!
 
-## Components made before hand
-There were a few parts of the project that I made before the hacakthon. That includes the following:
-- the view for setting up, importing images, and preparing to train the image classifier
-- the observation view for viewing the progress of the training
-- the use image classifier view for using the finished image classifier.
-- the preprocessing, the transfer learning setup, and the training pipeline for training the image classifier in the backend.
-
 ## Technologies Used
 - Google Cloud Platform (GCP Kubernetes to be exact)
 - Docker
