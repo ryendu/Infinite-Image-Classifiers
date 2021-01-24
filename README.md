@@ -1,6 +1,11 @@
 # Infinite-Image-Classifiers
 > An easy, simple to use interface to train and use Image Classifiers
-Click Here for the Video Demo.
+
+I did host the backend on GCP but now i can only run it on my local machine (because I ran out of the GCP free trial tokens) so at this time it is not possible for you to quickly try it out.
+
+Here is the [Demo Video](https://youtu.be/Dl-M3mMAYnc)
+
+
 ## How to use
 To train a Image Classifier with Infinite Image Classifiers, simply follow these steps:
 1. navigate to the create image classifier view by clicking "Create Image Classifier" from the home screen
@@ -8,11 +13,6 @@ To train a Image Classifier with Infinite Image Classifiers, simply follow these
 3. add a few classes to classify images into then select images to add to those classes
 4. select the number of iterations to train the ml model for
 5. sit back, relax, see how its doing, and within no time the image classifier will be ready for you to save and use!
-
-### Try it out quickly 
-> for the Judge(s) of the Hack Your Portfolio Hackathon
-
-Hello there **Judge(s)**! For you to quikly try it out, click on this link on an iOS device (Be aware that the link is only avalible for one device).
 
 ## How does it work
 To create a image classifier, The following happens:
@@ -23,13 +23,6 @@ To create a image classifier, The following happens:
 5. once the backend is done doing its thing, the user can then export the .mlmodel file, and/or save the Image classifier in the app.
 
 After the Image Classifer is saved on the app, the user can then go to the Machine Learning Portfolio page to find it, upload or take a photo, and use the image classifier to classify a new image!
-
-## Components made before hand
-There were a few parts of the project that I made before the hacakthon. That includes the following:
-- the view for setting up, importing images, and preparing to train the image classifier
-- the observation view for viewing the progress of the training
-- the use image classifier view for using the finished image classifier.
-- the preprocessing, the transfer learning setup, and the training pipeline for training the image classifier in the backend.
 
 ## Technologies Used
 - Google Cloud Platform (GCP Kubernetes to be exact)
