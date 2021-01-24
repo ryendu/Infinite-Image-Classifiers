@@ -7,3 +7,4 @@ env/
 Design/
 /Backend/app/serviceAccountKey.json
 Backend/app/serviceAccountKey.json
+GoogleService-Info.*
